@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: 3.12
 
-      - name: Installera pytest
+      - name: Installera dependencies
         run: pip install -r requirements.txt
 
       - name: Kör tester
