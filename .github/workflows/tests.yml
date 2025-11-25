@@ -1,0 +1,21 @@
+name: Kör tester
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hämta repo
+        uses: actions/checkout@v3
+
+      - name: Installera Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Installera pytest
+        run: pip install pytest
+
+      - name: Kör tester
+        run: pytest
