@@ -15,7 +15,7 @@ jobs:
           python-version: 3.10
 
       - name: Installera pytest
-        run: pip install pytest
+        run: pip install -r requirements.txt
 
       - name: Kör tester
         run: pytest
